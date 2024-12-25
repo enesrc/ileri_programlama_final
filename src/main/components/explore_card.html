@@ -1,0 +1,21 @@
+<div class="card">
+  <img src="https://dummyimage.com/198x198&text={{name}}" class="card-img-top" alt="resim">
+  <div style="padding: 10px;">
+    <span class="product-name">{{name}}</span>
+
+    <div style="display: flex; justify-content: space-between; font-size: 14px;">
+      <p>Fiyat: ${{price}}</p>
+      <p>Adet: {{stock}}</p>
+    </div>
+
+    <hr>
+
+    <div style="display: flex; justify-content: space-between; font-size: 14px;">
+      <a class="btn btn-sm btn-primary">incele</a>
+      <form action="/user/explorepost" method="POST">
+        <input type="hidden" name="productId" value="{{id}}">
+        <button type="submit" class="btn btn-sm btn-success">Sepete Ekle</button>
+      </form>
+    </div>
+  </div>
+</div>

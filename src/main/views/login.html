@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Giriş</title>
+    <style>
+        body {
+            background-color: #11003b;
+            font-family: Arial, sans-serif;
+        }
+        .container_ {
+            margin-top: 100px;
+            padding: 40px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-control:focus {
+            background-color: #e9f4ff;
+            border-color: #007bff;
+        }
+        .alert.override-padding {
+            padding-left: 10px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card container_">
+        <h1 class="text-center">bitpazari.com</h1>
+        <h3 class="text-center">giriş</h3>
+
+        <div class="alert alert-danger override-padding alert-dismissible fade show mt-3" style="display: {{loginErrorVisibility}}" role="alert">
+            Geçersiz e-posta veya şifre.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-success override-padding alert-dismissible fade show mt-3" style="display: {{registerSuccessVisibility}}" role="alert">
+            Kayıt başarılı. Giriş yapabilirsiniz.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <form action="/auth/loginpost" method="post">
+            <div class="form-group">
+                <label for="email">E-posta</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">Giriş Yap</button>
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <p class="text-secondary">Henüz bir hesabınız yok mu? <a href="/auth/register" class="text-dark">Kayıt Ol</a></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

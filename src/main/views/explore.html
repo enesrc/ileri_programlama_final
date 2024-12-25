@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Fa icon -->
+    <script src="https://kit.fontawesome.com/24e6ff7d6f.js" crossorigin="anonymous"></script> <!-- Fa icon -->
+    <title>Ürünleri Keşfet</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #11003b;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0;
+        }
+        .padding{
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .products{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .card{
+            width: 200px;
+        }
+        .product-name {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Maksimum 2 satır */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            line-height: 1.2; /* Satır yüksekliği */
+            height: calc(1.2em * 2); /* 2 satırlık yüksekliğe ayarlanır */
+        }
+        li.nav-item {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    {{navbar}}
+
+    <!-- content -->
+    <div class="container-fluid padding">
+        <div class="container-lg bg-light">
+            <div class="products">
+                {{products}}
+            </div>
+        </div>
+    </div>
+
+    {{footer}}
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script> <!-- Fa icon -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+
+</html>
