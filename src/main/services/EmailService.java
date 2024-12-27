@@ -7,8 +7,8 @@ import java.util.Properties;
 
 public class EmailService {
 
-    final String username = "saracenes2003@gmail.com";
-    final String password = "etda hkcp rfwa zahn";
+    final String username = "your_email";
+    final String password = "your_email_app_key";
 
     String host = "smtp.gmail.com";
     String port = "587";
